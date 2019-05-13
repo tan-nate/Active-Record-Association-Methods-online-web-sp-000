@@ -7,6 +7,6 @@ class Song < ActiveRecord::Base
   end
 
   def drake_made_this
-    self.all{|song| song.artist.name == "Drake"}
+    self.all.collect {|song| song.artist.name == "Drake"}
   end
 end
